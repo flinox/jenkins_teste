@@ -54,6 +54,7 @@
         echo "Creating $filename"
         echo ""
         echo $content
+        echo $content > log.txt
         #curl -i -H "Content-Type: application/json" -X POST --data "$content" http://$connect_hostname/connectors
         echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"
         sleep 3
