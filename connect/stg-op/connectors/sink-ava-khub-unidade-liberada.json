@@ -1,0 +1,27 @@
+{
+    "config": {
+        "auto.create": "false",
+        "auto.evolve": "false",
+        "connection.password": "$connect_pass",
+        "connection.url": "$connect_url",
+        "connection.user": "$connect_user",
+        "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+        "insert.mode": "upsert",
+        "key.converter": "io.confluent.connect.avro.AvroConverter",
+        "key.converter.schema.registry.url": "$connect_schema_registry",
+        "key.converter.schemas.enable": "true",
+        "pk.fields": "CD_UNIDADE_KEY",
+        "pk.mode": "record_key",
+        "table.name.format": "TPC_KHUB_UNIDADE_LIBERADA",
+        "tasks.max": "1",
+        "topics": "KHUB_UNIDADE_LIBERADA",
+        "transforms": "converte_data",
+        "transforms.converte_data.field": "DT_ATLZ",
+        "transforms.converte_data.target.type": "unix",
+        "transforms.converte_data.type": "org.apache.kafka.connect.transforms.TimestampConverter$Value",
+        "value.converter": "io.confluent.connect.avro.AvroConverter",
+        "value.converter.schema.registry.url": "$connect_schema_registry",
+        "value.converter.schemas.enable": "true"
+    },
+    "name": "sink-ava-khub-unidade-liberada"
+}
