@@ -1,7 +1,14 @@
 #!/bin/bash
 
 
-# docker run -it --rm --name runner -h runner -v ~/aesakroton.visualstudio.com/shared_services/kapacitor_clusters/connect/stg-op/connectors:/nnectors -w /connectors ubuntu:trusty /bin/bash -c "apt-get update && apt-get -y install gettext-base && apt-get -y install jq && apt-get -y install curl && /connectors/create.sh"
+# docker run -it --rm --name runner -h runner -v ~/aesakroton.visualstudio.com/shared_services/kapacitor_clusters/connect/stg-op/connectors:/connectors -w /connectors ubuntu:trusty /bin/bash -c "apt-get update && apt-get -y install gettext-base && apt-get -y install jq && apt-get -y install curl && /connectors/create.sh"
+
+# docker run -it --rm --name runner -h runner -v ./connect/stg-op/connectors:/connectors -w /connectors ubuntu:trusty /bin/bash -c "apt-get update && apt-get -y install gettext-base && apt-get -y install jq && apt-get -y install curl && /connectors/create.sh"
+
+# echo $pwd
+# chown -R 1000:1000 .
+# #docker run --rm --name runner -h runner -v $(pwd)/connect/stg-op/connectors:/connectors -w /connectors ubuntu:trusty /bin/bash -c "ls /connectors/ -l"
+# docker run --name runner -h runner -v $(pwd)/connect/stg-op/connectors:/connectors -w /connectors ubuntu:trusty /bin/bash -c "apt-get update && apt-get -y install gettext-base && apt-get -y install jq && apt-get -y install curl && chmod +x create.sh && ls / && ./create.sh"
 
 # if [ $# -eq 0 ]
 # then
