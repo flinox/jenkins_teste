@@ -55,7 +55,7 @@
         echo ""
         echo $content
         echo $content > log.json
-        #curl -i -H "Content-Type: application/json" -X POST --data "$content" http://$connect_hostname/connectors
+        curl -i -H "Content-Type: application/json" -X POST --data "$content" http://$connect_hostname/connectors
         echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"
         #sleep 3
 
