@@ -13,7 +13,7 @@
         "schema.pattern": "MOODLETRACKER",
         "tasks.max": "1",
         "timestamp.column.name": "DT_ATLZ",
-        "topic.prefix": "KHUB_UNIDADE_LIBERADA",
+        "topic.prefix": "TEMP_KHUB_UNIDADE_LIBERADA",
         "transforms": "createKey,AddNamespace",
         "transforms.createKey.fields": "CD_UNIDADE_KEY",
         "transforms.createKey.type": "org.apache.kafka.connect.transforms.ValueToKey",

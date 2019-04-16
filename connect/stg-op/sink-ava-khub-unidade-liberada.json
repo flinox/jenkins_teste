@@ -14,7 +14,7 @@
         "pk.mode": "record_key",
         "table.name.format": "TPC_KHUB_UNIDADE_LIBERADA",
         "tasks.max": "1",
-        "topics": "KHUB_UNIDADE_LIBERADA",
+        "topics": "TEMP_KHUB_UNIDADE_LIBERADA",
         "transforms": "converte_data",
         "transforms.converte_data.field": "DT_ATLZ",
         "transforms.converte_data.target.type": "unix",
